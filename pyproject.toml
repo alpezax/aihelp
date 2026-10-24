@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aihelp"
+version = "0.1.0"
+description = "CLI aihelp"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+  "openai>=1.0.0",
+]
+authors = [
+  { name = "acme", email = "tu@acme.com" }
+]
+
+[project.scripts]
+aihelp = "aihelp.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
